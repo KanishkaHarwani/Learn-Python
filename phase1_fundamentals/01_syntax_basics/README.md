@@ -1,56 +1,49 @@
-# Syntax Basics
+# Syntax Basics  (Day 1)
 
-**Day range:** Day 1-2
+## Overview
 
-## Concepts (in my own words)
-- Python doesn't use `{ }` or `end` keywords to mark blocks — **indentation
-  itself is the syntax**. A colon `:` starts a block (after `if`, `for`,
-  `def`, `class`, etc.) and everything indented under it belongs to that
-  block. Standard is 4 spaces, don't mix tabs and spaces.
-- A statement normally ends at the newline — no semicolon needed. You *can*
-  put a `;` to fit two statements on one line, but it's considered bad style
-  outside of quick one-liners.
-- Comments start with `#` and run to the end of the line. There's no
-  built-in multi-line comment syntax — people often use a triple-quoted
-  string as a "comment block," but that's technically just an unused string
-  literal, not a real comment.
-- `print()` is a function (not a statement like Python 2) — always needs
-  parentheses. `print(a, b)` prints both separated by a space by default;
-  `print(a, end="")` suppresses the trailing newline.
-- Variable names: letters, digits, underscores, can't start with a digit,
-  case-sensitive, can't be a reserved keyword (`import keyword;
-  keyword.kwlist` shows the full list). Convention is `snake_case` for
-  variables/functions, `PascalCase` for classes, `UPPER_SNAKE` for
-  constants.
-- Line continuation: a long line can be split with a trailing backslash
-  `\`, but it's more common (and safer) to just wrap in parentheses,
-  brackets, or braces — Python treats unclosed `()`, `[]`, `{}` as one
-  logical line automatically.
-- Running code: `python script.py` runs a file top to bottom. The
-  interactive REPL (`python` with no args, or `ipython`) evaluates one
-  expression at a time and echoes the result — good for quick checks, not
-  for real programs.
-- `.py` files can be scripts (run directly) or modules (imported by other
-  files) — that duality is why the `if __name__ == "__main__":` guard
-  exists (comes up more in the modules topic, but worth knowing it exists
-  from day one).
+Python's core syntax rules: indentation-based blocks, comments, the print/input functions, statements vs expressions, and how the interpreter reads a .py file top to bottom.
 
-## Gotchas / things that tripped me up
-- Mixing tabs and spaces in the same block raises a `TabError` (or silently
-  does the wrong thing in old Python 2 code) — set the editor to insert
-  spaces only.
-- Forgetting the colon `:` at the end of `if`, `for`, `def`, etc. is a very
-  common `SyntaxError` for beginners.
-- Inconsistent indentation *within the same block* (e.g. 4 spaces on one
-  line, 5 on the next) raises `IndentationError`, even though both "look"
-  indented.
-- An empty block (e.g. stubbing out a function body to fill in later) needs
-  the `pass` keyword — you can't leave a colon with nothing indented under
-  it.
+## Key Concepts
 
-## Useful docs / links
-- Python official tutorial, "An Informal Introduction to Python":
-  https://docs.python.org/3/tutorial/introduction.html
-- PEP 8 (style guide — naming, indentation conventions):
-  https://peps.python.org/pep-0008/
-- `python -m this` in a terminal — prints "The Zen of Python."
+- Indentation defines blocks (no braces) — consistent spaces (4) or tabs, never mixed
+- Comments: `#` single-line, triple-quoted strings used as block comments/docstrings
+- print() and input() for basic I/O; f-strings for formatted output
+- Statements (assignment, import) vs expressions (produce a value)
+- The Python interpreter, REPL, and running scripts via `python file.py`
+- PEP 8 style guide basics: naming, line length, whitespace
+
+## Gotchas
+
+- IndentationError from mixing tabs and spaces
+- input() always returns a string — must cast with int()/float()
+- print() vs return — print just displays, doesn't give a usable value
+
+## Search Keywords
+
+Use these to look things up when you need more depth:
+
+- `python indentation rules`
+- `PEP 8 style guide`
+- `python f-strings tutorial`
+- `python REPL vs script`
+- `python comments and docstrings`
+
+## References
+
+**Official Docs**
+- [Python Official Tutorial - Intro](https://docs.python.org/3/tutorial/introduction.html)
+- [PEP 8](https://peps.python.org/pep-0008/)
+
+**YouTube (search these titles)**
+- "python syntax basics for beginners"
+- "PEP 8 explained"
+- "python f-strings tutorial"
+
+**Books**
+- Python Crash Course — Eric Matthes (ch. 1-2)
+- Automate the Boring Stuff with Python — Al Sweigart (ch. 1)
+
+## My Notes
+
+(Write concepts in your own words here as you learn — future-you is the audience.)
