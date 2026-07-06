@@ -58,6 +58,6 @@ Buffer days aren't hard-scheduled above — plan to absorb slippage roughly ever
 10 days rather than running at 60/60 density.
 
 ## Capstone Project
-See [`/capstone`](./capstone-<name>) — TBD, to be scoped once Phase 2/3 topics make clear
+See [`/capstone`](./Capstone-<name>) — TBD, to be scoped once Phase 2/3 topics make clear
 what's most interesting to build (candidates: a small web app, a CLI tool with a
 real use case, or a data pipeline/dashboard).
