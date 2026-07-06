@@ -1,7 +1,14 @@
-# Mini Project: Functions
+# Calculator Functions
 
-**Goal:**
+## What it does
+A calculator module where each operation (add/sub/mul/div/power) is its own function, dispatched via a dictionary of functions.
 
-**What it does:**
+## How to run
+```
+python main.py
+```
 
-**How to run:**
+## Status
+- [ ] Planned
+- [ ] In progress
+- [ ] Done
