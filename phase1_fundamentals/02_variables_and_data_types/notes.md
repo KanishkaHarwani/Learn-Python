@@ -1,58 +1,50 @@
-# Variables and Data Types
+# Variables and Data Types  (Day 2)
 
-**Day range:** 3-4
+## Overview
 
-## Concepts (in my own words)
+How Python names bind to objects, dynamic typing, the built-in scalar types (int, float, bool, str, NoneType), and type conversion rules.
 
-### Variables
-- A variable is just a name pointing to an object in memory. Python has no
-  "declare a type" step — assignment (`x = 5`) creates the variable.
-- Python is **dynamically typed**: the same name can point to an `int` now
-  and a `str` later. The *value* has a type, not the variable.
-- Multiple assignment: `a, b, c = 1, 2, 3` and `x = y = z = 0` both work.
-- Naming rules: letters, digits, underscores; can't start with a digit;
-  case-sensitive; can't use reserved words (`class`, `for`, `if`, etc.).
-- Convention: `snake_case` for variables/functions, `UPPER_CASE` for
-  constants (Python doesn't enforce constants, it's just convention).
+## Key Concepts
 
-### Core built-in data types
-- `int` — whole numbers, arbitrary precision (no overflow like C).
-- `float` — decimal numbers, stored as double-precision (64-bit) floats.
-- `bool` — `True` / `False`, actually a subclass of `int` (`True == 1`).
-- `str` — immutable sequence of Unicode characters.
-- `NoneType` — the single value `None`, Python's "no value" / null.
-- `complex` — rarely used day-to-day, but exists (`3 + 4j`).
+- Variables are references/names bound to objects (not boxes holding values)
+- Dynamic typing: a name can be rebound to a different type
+- Built-in types: int, float, complex, bool, str, NoneType
+- Type conversion / casting: int(), float(), str(), bool()
+- Mutability vs immutability (preview — deep dive in data structures)
+- id(), type(), and isinstance() for inspecting objects
+- Truthy/falsy values in Python
 
-### Type checking and conversion
-- `type(x)` returns the exact type; `isinstance(x, int)` also checks
-  subclasses (better for branching logic).
-- Explicit conversion ("casting"): `int("5")`, `float("3.14")`, `str(42)`,
-  `bool(0)`.
-- Implicit conversion happens in mixed arithmetic: `int + float -> float`.
-- `bool()` on other types: `0`, `0.0`, `""`, `[]`, `{}`, `None` are all
-  "falsy". Everything else is "truthy".
+## Gotchas
 
-### Mutability (foundational, comes up everywhere later)
-- `int`, `float`, `bool`, `str`, `tuple` -> immutable.
-- `list`, `dict`, `set` -> mutable (covered properly in Data Structures topic).
-- Immutability matters because `a = b` on an immutable type just copies a
-  reference to the same value; you can't accidentally mutate it through `a`.
+- 0, '', [], None, {} are all falsy
+- int/float division: `/` always returns float, `//` is floor division
+- Small int caching (-5 to 256) can make `is` comparisons misleading
 
-## Gotchas / things that tripped me up
-- Floating point isn't exact: `0.1 + 0.2 != 0.3` (it's
-  `0.30000000000000004`). Compare floats with a tolerance (`math.isclose`),
-  not `==`.
-- `True + True == 2` because `bool` is a subtype of `int`. Useful for
-  counting `True` values in a list with `sum()`, surprising otherwise.
-- `id()` and `is` check identity, not equality. Small ints (-5 to 256) and
-  short strings are cached by CPython, so `is` can *look* like it works for
-  equality on small values — don't rely on that.
-- `input()` always returns a `str`, even if the user types a number — cast
-  it explicitly (`int(input())`).
-- Integer division `//` floors toward negative infinity, not toward zero:
-  `-7 // 2 == -4`, not `-3`.
+## Search Keywords
 
-## Useful docs / links
-- https://docs.python.org/3/library/stdtypes.html
-- https://docs.python.org/3/tutorial/introduction.html
-- https://docs.python.org/3/library/functions.html#type
+Use these to look things up when you need more depth:
+
+- `python dynamic typing explained`
+- `python mutable vs immutable types`
+- `python type() vs isinstance()`
+- `python truthy falsy values`
+- `python variable name binding`
+
+## References
+
+**Official Docs**
+- [Python Data Model](https://docs.python.org/3/reference/datamodel.html)
+- [Built-in Types](https://docs.python.org/3/library/stdtypes.html)
+
+**YouTube (search these titles)**
+- "python variables and data types explained"
+- "python mutable vs immutable objects"
+- "python is vs == difference"
+
+**Books**
+- Python Crash Course — Eric Matthes (ch. 2)
+- Fluent Python — Luciano Ramalho (ch. 1, object references)
+
+## My Notes
+
+(Write concepts in your own words here as you learn — future-you is the audience.)
