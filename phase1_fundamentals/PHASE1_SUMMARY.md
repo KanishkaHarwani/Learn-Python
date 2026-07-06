@@ -1,37 +1,24 @@
-# Phase 1 Summary
+# Phase 1 Summary — Python Fundamentals (Day 1-20)
 
 ## What was covered
-- **01_syntax_basics** — indentation-based blocks, comments (`#` and
-  triple-quoted strings), the `print()` function and its `sep`/`end`
-  keyword args, valid identifiers and naming conventions (snake_case,
-  PascalCase, UPPER_SNAKE), and line continuation (implicit via
-  brackets vs explicit via `\`).
-- *(remaining topics 02-10 not yet started — update this section as
-  each one is finished)*
+- [01_syntax_basics](./01_syntax_basics) — Day 1
+- [02_variables_and_data_types](./02_variables_and_data_types) — Day 2
+- [03_control_flow](./03_control_flow) — Day 3-4
+- [04_functions](./04_functions) — Day 5-6
+- [05_data_structures](./05_data_structures) — Day 7-8
+- [06_comprehensions_and_generators](./06_comprehensions_and_generators) — Day 9
+- [07_string_manipulation](./07_string_manipulation) — Day 10-11
+- [08_file_io](./08_file_io) — Day 12-13
+- [09_error_handling](./09_error_handling) — Day 14-15
+- [10_modules_and_packages](./10_modules_and_packages) — Day 16
+- [11_virtual_envs_and_cli_basics](./11_virtual_envs_and_cli_basics) — Day 17
+- [12_oop_basics](./12_oop_basics) — Day 18-20
 
 ## What was hardest / needs revisiting
-- *(fill in once more topics are done — patterns are easier to spot
-  across a few topics than after just one)*
+(Fill in after completing the phase — be specific, e.g. "generators/yield laziness", "decorator syntax with @property".)
 
-## Key takeaways (plain language)
-- Python's indentation isn't just style — it's the actual block syntax,
-  so getting sloppy with spacing causes real errors, not just messy
-  code.
-- `print()` being a real function (not a keyword/statement) means it
-  takes arguments like any other function — worth knowing `sep` and
-  `end` exist early since they come up constantly.
-- Naming conventions (snake_case, etc.) aren't enforced by the
-  interpreter, but following them from day one avoids having to
-  relearn habits later.
+## Key takeaways in plain language
+(Fill in — 3-5 sentences in your own words on what Python "feels like" now.)
 
-## Topic folder links
-- [01_syntax_basics](./01_syntax_basics) ✅
-- [02_variables_and_data_types](./02_variables_and_data_types)
-- [03_control_flow](./03_control_flow)
-- [04_functions](./04_functions)
-- [05_data_structures](./05_data_structures)
-- [06_string_manipulation](./06_string_manipulation)
-- [07_file_io](./07_file_io)
-- [08_error_handling](./08_error_handling)
-- [09_modules_and_packages](./09_modules_and_packages)
-- [10_oop_basics](./10_oop_basics)
+## Links back to topic folders for quick lookup
+See the list above — each folder's `notes.md` has Search Keywords + References (docs/YouTube/books) for that topic.
