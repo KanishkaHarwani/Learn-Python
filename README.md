@@ -48,9 +48,8 @@
 | 59-60 | Capstone prep / polish                |        |       |
 
 ## How this repo is organized
-Organized by topic, not by raw day number — see `learning_repo_structure_template.txt`
 for the full rationale. Each topic folder contains:
-- `notes.md` — concepts in my own words + gotchas + doc links
+- `README.md` — concepts in my own words + gotchas + doc links
 - `exercises/` — small numbered practice files, one concept each
 - `mini_project/` — a small applied project using the topic (mandatory for meatier topics)
 
