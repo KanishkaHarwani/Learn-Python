@@ -7,9 +7,9 @@ import re
 
 # Below is the contact book and all numbers are 5 digits and the emails are non-working
 contacts = {
-    "kanishka": {"Phones" : "929478281", "email" : "kansihk@kanishk.com"},
-    "sakshi": {"Phones" : "782164985", "email" : "sakshi@meanperson.com"},
-    "mayan": {"Phones" : "864351257", "email" : "mayan@coolpeep.com"}
+    "kka": {"Phones" : "929478281", "email" : "kk@kanishk.com"},
+    "shi": {"Phones" : "782164985", "email" : "shi@meanperson.com"},
+    "mn": {"Phones" : "864351257", "email" : "mn@coolpeep.com"}
 }
 
 def starting_message():
